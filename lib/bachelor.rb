@@ -1,8 +1,9 @@
 def get_first_name_of_season_winner(data, season)
   data.each do |season_number, info|
+    if season_number.include?(season)
   info.each do |details, details_data|
-  if details_data("status") == "winner"
-  return details_data("name")
+  if details_data(:status) == "winner"
+  return details_data(:name) 
   end
   end
 end
