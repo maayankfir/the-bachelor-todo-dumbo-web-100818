@@ -3,7 +3,7 @@ def get_first_name_of_season_winner(data, season)
     if season_number.include?(season)
   info.each do |details, details_data|
   if details_data[4] == "winner"
-  return 
+  return details_data[0]
   end
   end
 end
